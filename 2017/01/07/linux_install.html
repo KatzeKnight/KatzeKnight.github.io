@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>20170105</title>
+<title>linux_install</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
@@ -291,32 +291,90 @@ img {
 </style>
 </head>
 <body>
-<h1>Januray 5 2017</h1>
+<h1>JANUARY 7</h1>
+<h2>　　纪念我艰辛的安装linux之路</h2>
+<blockquote>
+<p>现在是北京时间20:51，更新一下我的博客<br />
+2017年1月7日</p>
+</blockquote>
+<h2>依旧以日记的形式</h2>
+<p>今天真是历经千辛万苦啊！把linux系统成功安装在了自己的机械硬盘，固态硬盘就留给Win0了。<br />
+原本上午在去上自习室自习之挂着下载了centos了，以前用过，是在虚拟机上操作的linux，安装并没有遇到什么问题，但是这一次在Win10基础上安装linux真是耗尽了我的心力啊！<br />
+个人认为我遇上了几乎所有能够遇到的问题，想把经验总结到今天的日记里面！  </p>
+<h1>开始</h1>
 <hr />
-<p>　　这是我第一篇博客的文章，拖了很久才建起来的博客。<br>
-　　首先很感谢那些在网络上发教程的人，我就循规蹈矩地copy了做我自己的博客。<br>
-我想很多人都是从在博客写日记开始的吧！作为一个专业是药学的大学生，我的确很喜欢计算机。都大二了，但是没有想那么多！努力吧<br></p>
+<p>在<a href="https://www.centos.org/">centos的官网</a>选择要下载的centos版本就遇到了问题了:  </p>
+<blockquote>
+<p>DVD ISO是啥？<br />
+Everthing ISO又是啥？<br />
+Minimal ISO又是啥？ <br />
+<img src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/267f9e2f07082838234a3c50b099a9014c08f12b.jpg" /></p>
+</blockquote>
+<p>大佬来拯救我了！(づ˘ﻬ˘)づ~~~<a href="https://www.google.co.jp/">https://www.google.co.jp/</a><br />
+尴尬，其实这个好像并不需要google吧！会一点英文的应该都能看得懂的。</p>
 <hr />
-<h2>今年给自己立的学习的flag蛮多的，如下：</h2>
-<ol>
-<li><strong>深入学习java</strong><em>(java是我的入门语言，其实也同时学了C啦，只是对java更加感兴趣)</em></li>
-<li><strong>学习MATLAB</strong><em>(或许我这样学是不对的，但是把所有时间都用来学习，多学点，好一些吧！毕竟如果我真的想在以后从事计算机行业)</em></li>
-<li><strong>学习Oracle、Microsoft Access</strong><em>(主要是学习oracle吧，access只是为了计算机等级考试，计算机等级证书还是需要的！)</em></li>
-<li><strong>练习好英语口语和听力</strong><em>(这是必须的啊)</em></li>
-<li><strong>考过计算机等级考试二级</strong><em>(然后才能考三级、四级啊)</em></li>
-<li><strong>弄好自己的博客吧！至少不要套模板了吧！</strong><em>(自己动手，丰衣足食啊！)</em></li>
-<li><em>没了......这么多flags了，努力ing</em></li>
-</ol>
-<h2>还有生活上的</h2>
-<ol>
-<li>坚持健身</li>
-<li>保护好身体，不要运动过度、</li>
-<li>做一个专一的男生，只能对她好</li>
-<li>要坚持良好的作息习惯</li>
-<li>学会自控，不要再次沉迷于游戏了！偶尔玩玩劳逸结合</li>
-<li>多看书，多看书，多看书</li>
-</ol>
-<h2>现在是北京时间：20:09</h2>
+<h1>自习结束之后</h1>
+<hr />
+<p>怀着满腔热血的我回来了！<br />
+因为以前曾经倒腾过无数次电脑系统，所以也就依旧循规蹈矩地用我的U盘(其实是内存卡+读卡器)进行U盘安装系统了！<br />
+1. 写入硬盘映像，用的是它——&gt;<a href="https://cn.ultraiso.net/index.html">Ultralso</a>,很好用，一直在用这个！<br />
+2. 具体步骤如下：<br />
+	　　启动——&gt;写入硬盘映像——&gt;选择硬盘驱动器——&gt;格式化——&gt;写入<br />
+3. 感觉那期待的心情简直就像是女朋友来看我一样，就是这样的感觉！</p>
+<blockquote>
+<p>以小步紧跑去迎接一个人的那种快乐</p>
+</blockquote>
+<h4>boom</h4>
+<h3>boom</h3>
+<h2>boom</h2>
+<p>然后就爆炸了！<br />
+在UEFI模式下启动U盘安装！出现了如下这些错误</p>
+<blockquote>
+<p>根本没有进入图形安装界面！<br />
+进入图形界面之后选择不了自己在windows下建立的分区安装<br />
+能够选择分区之后，提示错误：说在UEFI启动下disk需要为GPT </p>
+</blockquote>
+<p>OMG！我的脑袋要炸了，解决一个另一个又出来了！<br />
+下面来细细道来我是如何解决这些问题的...... <br />
+当然都是google并且加上自己浅薄的英语知识来进行解决的！<br />
+<strong>没有进入图形安装界面</strong>：</p>
+<blockquote>
+<p>　　错误：U盘内EFI/BOOT/grub.cfg 这个文件里面的的地址与U盘名字不一样！<br />
+　　原因：U盘的名字只能取到11个字符！我安装的centos的版本是:<br />
+　　　　CentOS-7-x86_64而我的U盘的名字是“CentOS-7-x8”<br />
+　　真尴尬啊！竟然是因为这样,感叹一番之后以为问题就解决了！  
+</p>
+</blockquote>
+<p><strong>进入图形界面之后选择不了分区</strong>  </p>
+<blockquote>
+<p>　　错误：能看到自己分出来的区域，但是点击不了<br />
+　　原因：在windows情况下只要压缩一个卷，然后不能建立新加卷，只是给linux开一个空间<br />
+　　在压缩出好几个卷之后，与安装时候空间对比，总算是搞清楚了在windows下分区给linux只能压缩出一个空间，但是不能创建成新卷  
+</p>
+</blockquote>
+<p><strong>能够选择分区，但是需要disk为GPT</strong></p>
+<blockquote>
+<p>　　这个就不好解决了，因为这样要把硬盘转换成GPT格式，硬盘东西会全部没有，所以显然对于我来说是不可行的。  
+</p>
+</blockquote>
+<h1>另觅他法</h1>
+<p>1.</p>
+<blockquote>
+<p>BIOS上设置用EFI启动U盘！我的电脑是华硕的：具体操作：启动电脑时候按住F2进入BIOS(不同品牌的电脑不一样)<br />
+ 进入之后的设置也是根据不同的电脑设置不一样：我的步骤是这样的：<br />
+ 把BIOS security的secure项改为disable<br />
+ 然后在Boot项把CSM改为enable<br />
+ F10保存<br />
+ 重新启动进入BIOS，就可以在Save&amp;Exit处选择你的U盘启动了 </p>
+</blockquote>
+<hr />
+<p>2.</p>
+<blockquote>
+<p>　出现以下画面的时候  <br />
+<img src="image/centos7.png" alt="centos7" /><br />
+　按tab键，之后会出现这样的一行字：
+<img src="image/centos7_2.png" alt="centos7_2" /></p>
+</blockquote>
 
 </body>
 </html>
